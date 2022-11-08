@@ -1,0 +1,1 @@
+.searchForm{display:flex;justify-content:center}.searchForm:hover{background:#1fcc74}.searchForm.danger{background:#e1644e}.searchForm.danger:hover{background:#dd5138}.searchForm.transparent{background:rgba(0,0,0,0)}.searchForm.transparent:hover{color:#ccc}
