@@ -13,11 +13,11 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-    <App />
-  </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  </Provider >
 )
 
 // import ReactDOM from 'react-dom';
