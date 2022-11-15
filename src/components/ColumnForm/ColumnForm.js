@@ -1,16 +1,19 @@
 import styles from './ColumnForm.module.scss';
 import { useState } from 'react';
-import Button from '../Button/Button'
+import Button from '../Button/Button';
+import { useDispatch } from 'react-redux';
 
-const ColumnForm = props => {
-  // const [value, setValue] = useState('');
+const ColumnForm = () => {
+
+  const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
   const [icon, setIcon] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.action({ title: title, icon: icon });
+    dispatch({ type: 'ADD_COLUMN', newColumn: { title, icon } });
+    console.log('dispatch', dispatch)
     setTitle('');
     setIcon('');
   }
@@ -26,4 +29,4 @@ const ColumnForm = props => {
   );
 };
 
-export default ColumnForm
+export default ColumnForm;
