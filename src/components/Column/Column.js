@@ -7,11 +7,17 @@ const Column = (props) => {
 
     const searchString = useSelector(state => state.searchString);
 
-    const cards = useSelector(state =>
-        state.cards.filter(
-            card => card.columnId === props.id)
-        && card.title.toLowerCase().includes(searchString.toLowerCase()
-        ));
+    const cards = useSelector(
+        state =>
+            state.cards.filter(
+                card =>
+                    card.columnId === props.id
+                    && card.title.toLowerCase().includes(
+                        searchString.toLowerCase()
+                    )
+            )
+    );
+
 
     return (
         <article className={styles.column}>
@@ -23,7 +29,7 @@ const Column = (props) => {
                 {cards.map(card => <Card key={card.id} title={card.title} />)}
 
             </ul>
-            <CardForm columnId={props.id} addCard={props.addCard} />
+            <CardForm columnId={props.id} action={props.columnId} payload={props.payload} />
         </article>
     );
 };

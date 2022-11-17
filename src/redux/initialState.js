@@ -17,8 +17,6 @@ const initialState = {
         }
     ],
 
-
-
     cards: [
         { id: 1, columnId: 1, title: 'This is Going to Hurt' },
         { id: 2, columnId: 1, title: 'Interpreter of Maladies' },
