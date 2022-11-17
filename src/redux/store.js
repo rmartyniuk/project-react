@@ -7,9 +7,24 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     case 'ADD_COLUMN':
-      return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }] };
+      return {
+        ...state, columns: [
+          ...state.columns, {
+            ...action.payload,
+            id: shortid()
+          }]
+      };
     case 'ADD_CARD':
-      return { ...state, cards: [...state.cards, { id: shortid(), columnId: action.payload.columnId, title: action.payload.title }] }
+      return {
+        ...state, cards: [
+          ...state.cards, {
+            id: shortid(),
+            columnId: action.payload.columnId,
+            title: action.payload.title
+          }]
+      };
+    case 'UPDATE_SEARCHSTRING':
+      return { ...state, searchString: action.payload };
     default:
       return state;
   };

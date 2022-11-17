@@ -16,7 +16,8 @@ const CardForm = props => {
             type: 'ADD_CARD',
             payload: {
                 id: shortid(),
-                columnId: props.columnId, title: title
+                columnId: props.columnId,
+                title: title
             }
         });
         setTitle('');
