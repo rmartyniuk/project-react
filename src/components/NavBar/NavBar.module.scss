@@ -1,0 +1,45 @@
+@import '../../styles/settings.scss';
+
+.nav {
+    background-color: darken($color-dark, 3%);
+    width: 100%;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.toggler_icon {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+i {
+    font-size: 24px;
+    color: $color-light;
+}
+
+.navbar_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li a {
+    color: $color-light;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: $base-size;
+}
+
+.linkActive {
+    color: $color-warning;
+}
